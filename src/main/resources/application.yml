@@ -1,0 +1,14 @@
+server:
+  port: 8989
+spring:
+  datasource:
+    password: xkool
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/grocery
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    encoding: UTF-8
+    # 开发环境最好开启 outOfOrder, 生产环境关闭 outOfOrder .
+    out-of-order: false
+    # 禁止清理数据库表,千万要设置为true！否则默认是false -> 报错的时候会清空所有数据！
+    clean-disabled: true
